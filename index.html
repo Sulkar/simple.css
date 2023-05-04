@@ -5,14 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Simple.css Test Page</title>
-	<!-- The following are some stylesheets for testing -->
-	<!-- Sanitize.css reset -->
-	<!-- <link href="https://unpkg.com/sanitize.css" rel="stylesheet" /> -->
-	<!-- Latest release version of Simple.css -->
-	<!-- <link rel="stylesheet" href="https://unpkg.com/simpledotcss/simple.css"> -->
-	<!-- Latest commit from GitHub -->
-	<!-- <link rel="stylesheet" href="https://cdn.simplecss.org/simple.css"> -->
-	<!-- Local version -->
+
 	<link rel="stylesheet" href="simple.css">
 	<style>
 		.grid>* {
@@ -29,12 +22,22 @@
 	<header>
 		<h1>Simple.css Test Page</h1>
 		<p>This is a test page filled with common HTML elements.</p>
+
+		<a href="https://editor.unsere-schule.org/" target="_blank" style="text-decoration: none; color: rgb(38, 50, 56);">
+			<div style="display:flex; justify-content: center;">
+				<img src="/images/logo.svg" style="max-width: 80px;">
+				<h1 style="margin: 10px 0 0 5px;">ode Editor</h1>
+			</div>
+		</a>
 		<p class="unsereSchule">Unser einfacher Code Editor nutzt eine angepasste Version von simple.css. Alle
 			Änderungen sind in roter
-			Farbe dargestellt.</p>
+			Farbe dargestellt. Du kannst simple.css im Code Editor nutzen, wenn du folgenden HTML-Code eingibst:</p>
+		<pre>
+<code>&lt;link rel="stylesheet" href="simple.css"&gt;</code></pre>
+
 		<nav>
 			<ul>
-				<li><a href="https://editor.unsere-schule.org/" class="unsereSchule">Code Editor</a></li>
+				<li><a href="https://editor.unsere-schule.org/" target="_blank" class="unsereSchule">Code Editor</a></li>
 				<li><a href="https://simplecss.org/">simple.css homepage</a></li>
 				<li><a href="https://github.com/kevquirk/simple.css">GitHub repo</a></li>
 			</ul>
@@ -1222,6 +1225,8 @@
 	<footer>
 		<p>Based on <a href="http://github.com/cbracco/html5-test-page">HTML5-test-page</a> by cbracco.</p>
 	</footer>
+
+	<script src="main.js"></script>
 </body>
 
 </html>
