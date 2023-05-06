@@ -1,25 +1,13 @@
-/* add ons unsere-schule.org */
-.grid {
-  grid-column-gap: var(--grid-spacing-horizontal);
-  grid-row-gap: var(--grid-spacing-vertical);
-  display: grid;
-  grid-template-columns: 1fr;
-  margin: 0;
-}
-
-@media (min-width: 721px) {
-  .grid {
-    grid-template-columns: repeat(auto-fit, minmax(0%, 1fr));
-  }
-}
-
-
 /* Global variables. */
 :root,
 ::backdrop {
   /* unsere-schule.org variables */
   --grid-spacing-horizontal: 1rem;
   --grid-spacing-vertical: 1rem;
+  --hamburger-bg:  #212121;
+  --hamburger-bg-hover: #dcdcdc;
+  --hamburger-text: #dcdcdc;
+  --hamburger-text-hover: #212121;
 
   /* Set sans-serif & mono fonts */
   --sans-font: -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir,
@@ -59,6 +47,102 @@
   img,
   video {
     opacity: 0.8;
+  }
+}
+
+/* add ons unsere-schule.org */
+.grid {
+  grid-column-gap: var(--grid-spacing-horizontal);
+  grid-row-gap: var(--grid-spacing-vertical);
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 0;
+}
+
+@media (min-width: 721px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(0%, 1fr));
+  }
+}
+
+/* hamburger nav */
+.ce_nav {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  background-color: var(--hamburger-bg);
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.ce_nav img {
+  float: left;
+  max-height: 50px;
+  margin-right: 10px;
+}
+
+.ce_nav .ce_brand {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  color: var(--hamburger-text);
+}
+
+.ce_nav .ce_links {
+  display: flex;
+  align-items: center;
+  color: var(--hamburger-text);
+}
+
+.ce_nav a {
+  cursor: pointer;
+  display: block;
+  color: var(--hamburger-text);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.ce_nav a:hover {
+  background-color: var(--hamburger-bg-hover);
+  color: black;
+}
+
+.ce_nav .ce_hamburger {
+  display: none;
+  margin-left: auto;
+}
+
+@media screen and (max-width: 720px) {
+  .ce_nav .ce_links a {
+    display: none;
+  }
+
+  .ce_nav a.ce_hamburger {
+    float: right;
+    display: block;
+  }
+
+  .ce_nav.ce_open {
+    flex-direction: column;
+  }
+
+  .ce_nav.ce_open .ce_links {
+    position: relative;
+    display: block;
+  }
+
+  .ce_nav.ce_open .ce_links .ce_hamburger {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .ce_nav.ce_open .ce_links a {
+    float: none;
+    display: block;
+    text-align: left;
   }
 }
 
