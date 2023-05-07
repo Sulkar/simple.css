@@ -40,13 +40,14 @@
 		<strong><code>&lt;link rel="stylesheet" href="simple.css"&gt;</code></strong>
 
 	</header>
-	<nav class="container">
+
+	<nav>
 		<h2>HTML Elemente</h2>
 		<ul>
 			<li>
 				<a href="#layout">Layout</a>
 				<ul>
-					<li><a href="#us-container" class="unsereSchule">Container</a></li>
+					<li><a href="#us-container" class="unsereSchule">Container - Full</a></li>
 					<li><a href="#us-grid" class="unsereSchule">Grid</a></li>
 					<li><a href="#article">Article</a></li>
 					<li><a href="#sections">Sections</a></li>
@@ -110,91 +111,93 @@
 		</ul>
 	</nav>
 
-	<main class="container">
+	<main>
 
 		<!-- LAYOUT -->
 		<section id="layout">
 			<h1>Layout</h1>
+	</main>
+	<main class="full" style="background-color: var(--accent-bg);">
+		<!-- Container -->
+		<h2 id="us-container" class="unsereSchule">Container - Full</h2>
+		<p>Du kannst einem Element die Klasse <code>.full</code> geben, damit der Inhalt die ganze Breite des
+			Browsers ausfüllt. Das Element muss ein Child von <code>body</code> sein.</p>
 
-			<!-- Container -->
-			<h2 id="us-container" class="unsereSchule">Container</h2>
-			<p>Du kannst einem Element die Klasse <code>.container</code> geben, um den Inhalt zentriert in der Mitte
-				des Browsers anzuzeigen. Ohne diese Klasse füllt der Inhalt die ganze Breite des Browsers aus.</p>
-
-
-			<details>
-				<summary>Code:</summary>
-				<pre>
+	</main>
+	<main>
+		<details>
+			<summary>Code:</summary>
+			<pre>
 <code>&lt;div class="container"&gt;
 	&lt;h2&gt;Article&lt;/h2&gt;
 	&lt;p&gt;Text...&lt;/p&gt;
 &lt;/div&gt;</code></pre>
-			</details>
-			<p><a href="#top">[Top]</a></p>
+		</details>
+		<p><a href="#top">[Top]</a></p>
 
 
-			<!-- Grid -->
-			<h2 id="us-grid" class="unsereSchule">Grid</h2>
-			<div class="grid">
-				<div>1</div>
-				<div>2</div>
-				<div>3</div>
-				<div>4</div>
-				<div>5</div>
-				<div>6</div>
-				<div>7</div>
-				<div>8</div>
-			</div>
-			<br>
-			<details>
-				<summary>Code:</summary>
-				<pre>
+		<!-- Grid -->
+		<h2 id="us-grid" class="unsereSchule">Grid</h2>
+		<div class="grid">
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+			<div>4</div>
+			<div>5</div>
+			<div>6</div>
+			<div>7</div>
+			<div>8</div>
+		</div>
+		<br>
+		<details>
+			<summary>Code:</summary>
+			<pre>
 <code>&lt;div class="grid"&gt;
 	&lt;div&gt;1&lt;/div&gt;
 	&lt;div&gt;2&lt;/div&gt;
 	&lt;div&gt;3&lt;/div&gt;
 	&lt;div&gt;...&lt;/div&gt;
 &lt;/div&gt;</code></pre>
-			</details>
-			<p><a href="#top">[Top]</a></p>
+		</details>
+		<p><a href="#top">[Top]</a></p>
 
-			<!-- Article -->
-			<article id="article">
-				<header>
-					<h2>Article</h2>
-				</header>
-				<p>Text...</p>
-			</article>
-			<details>
-				<summary>Code:</summary>
-				<pre>
+		<!-- Article -->
+		<article id="article">
+			<header>
+				<h2>Article</h2>
+			</header>
+			<p>Text...</p>
+		</article>
+		<details>
+			<summary>Code:</summary>
+			<pre>
 <code>&lt;article&gt;
 	&lt;h2&gt;Article&lt;/h2&gt;
 	&lt;p&gt;Text...&lt;/p&gt;
 &lt;/article&gt;</code></pre>
-			</details>
-			<p><a href="#top">[Top]</a></p>
+		</details>
+		<p><a href="#top">[Top]</a></p>
 
-			<!-- Sections -->
-			<h2 id="sections">Sections</h2>
-			<section>
-				<h3>Header 1</h3>
-				<p>Test section 1</p>
-			</section>
-			<section>
-				<h3>Header 2</h3>
-				<p>Test section 2</p>
-			</section>
-			<details>
-				<summary>Code:</summary>
-				<pre>
+		<!-- Sections -->
+		<h2 id="sections">Sections</h2>
+		<section>
+			<h3>Header 1</h3>
+			<p>Test section 1</p>
+		</section>
+		<section>
+			<h3>Header 2</h3>
+			<p>Test section 2</p>
+		</section>
+		<details>
+			<summary>Code:</summary>
+			<pre>
 <code>&lt;section&gt;
 	&lt;h3&gt;Header 1&lt;/h3&gt;
 	&lt;p&gt;Test section 1&lt;/p&gt;
 &lt;/section&gt;</code></pre>
-			</details>
-			<p><a href="#top">[Top]</a></p>
-			<!-- LAYOUT END -->
+		</details>
+		<p><a href="#top">[Top]</a></p>
+		<!-- LAYOUT END -->
 		</section>
 
 		<!-- NAVBAR -->
