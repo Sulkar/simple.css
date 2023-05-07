@@ -21,7 +21,8 @@
 <body id="top">
 	<header>
 		<h1>Code Editor & simple.css</h1>
-		<p>Auf dieser Seite findest du verschiedene HTML-Elemente deren Code du kopieren und im <a href="https://editor.unsere-schule.org/" target="_blank">Code Editor</a> einfügen kannst.</p>
+		<p>Auf dieser Seite findest du verschiedene HTML-Elemente deren Code du kopieren und im <a
+				href="https://editor.unsere-schule.org/" target="_blank">Code Editor</a> einfügen kannst.</p>
 
 		<a href="https://editor.unsere-schule.org/" target="_blank"
 			style="text-decoration: none; color: rgb(38, 50, 56);">
@@ -30,19 +31,22 @@
 				<h1 style="margin: 10px 0 0 5px;">ode Editor</h1>
 			</div>
 		</a>
-		<p class="unsereSchule">Unser Editor nutzt eine angepasste Version des CSS-Frameworks: <a href="https://simplecss.org/" target="_blank">simple.css</a>. Alle
+		<p class="unsereSchule">Unser Editor nutzt eine angepasste Version des CSS-Frameworks: <a
+				href="https://simplecss.org/" target="_blank">simple.css</a>. Alle
 			Änderungen sind in roter
-			Farbe dargestellt. Du kannst simple.css im Code Editor nutzen, wenn du folgenden HTML-Code im Kopfbereich eingibst:</p>
-		
-<strong><code>&lt;link rel="stylesheet" href="simple.css"&gt;</code></strong>
+			Farbe dargestellt. Du kannst simple.css im Code Editor nutzen, wenn du folgenden HTML-Code im Kopfbereich
+			eingibst:</p>
+
+		<strong><code>&lt;link rel="stylesheet" href="simple.css"&gt;</code></strong>
 
 	</header>
-	<nav>
+	<nav class="container">
 		<h2>HTML Elemente</h2>
 		<ul>
 			<li>
 				<a href="#layout">Layout</a>
 				<ul>
+					<li><a href="#us-container" class="unsereSchule">Container</a></li>
 					<li><a href="#us-grid" class="unsereSchule">Grid</a></li>
 					<li><a href="#article">Article</a></li>
 					<li><a href="#sections">Sections</a></li>
@@ -106,15 +110,31 @@
 		</ul>
 	</nav>
 
-
-
-	<main>
+	<main class="container">
 
 		<!-- LAYOUT -->
 		<section id="layout">
 			<h1>Layout</h1>
+
+			<!-- Container -->
+			<h2 id="us-container" class="unsereSchule">Container</h2>
+			<p>Du kannst einem Element die Klasse <code>.container</code> geben, um den Inhalt zentriert in der Mitte
+				des Browsers anzuzeigen. Ohne diese Klasse füllt der Inhalt die ganze Breite des Browsers aus.</p>
+
+
+			<details>
+				<summary>Code:</summary>
+				<pre>
+<code>&lt;div class="container"&gt;
+	&lt;h2&gt;Article&lt;/h2&gt;
+	&lt;p&gt;Text...&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+			</details>
+			<p><a href="#top">[Top]</a></p>
+
+
 			<!-- Grid -->
-			<h1 id="us-grid" class="unsereSchule">Grid</h1>
+			<h2 id="us-grid" class="unsereSchule">Grid</h2>
 			<div class="grid">
 				<div>1</div>
 				<div>2</div>
@@ -227,16 +247,16 @@
 				<pre>
 <code>&lt;div class="ce_nav"&gt;
 	&lt;div class="ce_brand"&gt;
-		&lt;img src="logo.png"&gt;
+		&lt;img src="https://simplecss.unsere-schule.org/images/logo.svg"&gt;
 		MyWebsite
 		&lt;a class="ce_hamburger"&gt;
 			...
 		&lt;/a&gt;
 	&lt;/div&gt;
 	&lt;div class="ce_links"&gt;
-		&lt;a"&gt;Home&lt;/a&gt;
-		&lt;a"&gt;Contact&lt;/a&gt;
-		&lt;a"&gt;About&lt;/a&gt;
+		&lt;a&gt;Home&lt;/a&gt;
+		&lt;a&gt;Contact&lt;/a&gt;
+		&lt;a&gt;About&lt;/a&gt;
 	&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 			</details>
@@ -257,10 +277,12 @@ ce_hamburger.onclick = function () {
 }</code></pre>
 			</details>
 			<p>CSS variables:</p>
-			<pre><code>--hamburger-bg:  #212121;
---hamburger-bg-hover: #dcdcdc;
---hamburger-text: #dcdcdc;
---hamburger-text-hover: #212121;</code></pre>
+			<pre><code>:root {
+	--hamburger-bg:  #212121;
+	--hamburger-bg-hover: #dcdcdc;
+	--hamburger-text: #dcdcdc;
+	--hamburger-text-hover: #212121;
+}</code></pre>
 			<p><a href="#top">[Top]</a></p>
 
 		</section>

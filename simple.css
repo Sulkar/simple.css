@@ -4,7 +4,7 @@
   /* unsere-schule.org variables */
   --grid-spacing-horizontal: 1rem;
   --grid-spacing-vertical: 1rem;
-  --hamburger-bg:  #212121;
+  --hamburger-bg: #212121;
   --hamburger-bg-hover: #dcdcdc;
   --hamburger-text: #dcdcdc;
   --hamburger-text-hover: #212121;
@@ -50,7 +50,17 @@
   }
 }
 
-/* add ons unsere-schule.org */
+/* container (unsere-schule.org) */
+.container {
+  max-width: 920px;
+  margin: auto;
+}
+body > * {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+/* grid (unsere-schule.org) */
 .grid {
   grid-column-gap: var(--grid-spacing-horizontal);
   grid-row-gap: var(--grid-spacing-vertical);
@@ -73,6 +83,8 @@
   background-color: var(--hamburger-bg);
   grid-column-start: 1;
   grid-column-end: 4;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 .ce_nav img {
@@ -175,12 +187,9 @@ body {
   background-color: var(--bg);
   font-size: 1.15rem;
   line-height: 1.5;
-  display: grid;
-  grid-template-columns: 1fr min(45rem, 90%) 1fr;
+  /*display: grid;
+  grid-template-columns: 1fr min(45rem, 90%) 1fr;*/
   margin: 0;
-}
-body > * {
-  grid-column: 2;
 }
 
 /* Make the header bg full width, but the content inline with body */

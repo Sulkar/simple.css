@@ -1,5 +1,9 @@
 # Simple.css {}
 
+## Demo Code Editor
+[simple.css - Code Editor](https://simplecss.unsere-schule.org/)
+
+
 Simple.css is a CSS template that allows you to make a good looking website really quickly.
 
 **Find out more at [https://simplecss.org](https://simplecss.org).**
