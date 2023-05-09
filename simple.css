@@ -49,7 +49,18 @@
     opacity: 0.8;
   }
 }
-
+/* buttons (unsere-schule.org) */
+.btnSuccess {
+  background-color: #198754;
+}
+.btnDanger {
+  background-color: #dc3545;
+}
+.btnWarn{
+  background-color: #ffc107;
+  color:black;
+}
+/* .full (unsere-schule.org) */
 .full {
   grid-column: 1 / -1;
   margin: 0 0.5rem 0 0.5rem;
@@ -349,7 +360,7 @@ input[type="submit"]:enabled:hover,
 input[type="reset"]:enabled:hover,
 input[type="button"]:enabled:hover,
 label[type="button"]:hover {
-  filter: brightness(1.4);
+  filter: brightness(1.2);
   cursor: pointer;
 }
 

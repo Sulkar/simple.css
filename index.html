@@ -11,31 +11,21 @@
 		.grid>* {
 			background: var(--accent-bg);
 		}
-
-		.unsereSchule {
-			color: tomato !important;
-		}
 	</style>
 </head>
 
 <body id="top">
 	<header>
-		<h1>Code Editor & simple.css</h1>
+		<div style="display:flex; justify-content: center;">
+			<img src="/images/logo.svg" style="max-width: 80px;">
+			<h1 style="margin: 10px 0 0 5px;">ode Editor & simple.css</h1>
+		</div>
 		<p>Auf dieser Seite findest du verschiedene HTML-Elemente deren Code du kopieren und im <a
 				href="https://editor.unsere-schule.org/" target="_blank">Code Editor</a> einfügen kannst.</p>
 
-		<a href="https://editor.unsere-schule.org/" target="_blank"
-			style="text-decoration: none; color: rgb(38, 50, 56);">
-			<div style="display:flex; justify-content: center;">
-				<img src="/images/logo.svg" style="max-width: 80px;">
-				<h1 style="margin: 10px 0 0 5px;">ode Editor</h1>
-			</div>
-		</a>
-		<p class="unsereSchule">Unser Editor nutzt eine angepasste Version des CSS-Frameworks: <a
-				href="https://simplecss.org/" target="_blank">simple.css</a>. Alle
-			Änderungen sind in roter
-			Farbe dargestellt. Du kannst simple.css im Code Editor nutzen, wenn du folgenden HTML-Code im Kopfbereich
-			eingibst:</p>
+		<p>Unser Editor nutzt eine angepasste Version des CSS-Frameworks: <a href="https://simplecss.org/"
+				target="_blank">simple.css</a>. Du kannst simple.css nutzen, wenn du folgenden Link im Kopfbereich des
+			Editors eingibst:</p>
 
 		<strong><code>&lt;link rel="stylesheet" href="simple.css"&gt;</code></strong>
 
@@ -47,8 +37,8 @@
 			<li>
 				<a href="#layout">Layout</a>
 				<ul>
-					<li><a href="#us-container" class="unsereSchule">Container - Full</a></li>
-					<li><a href="#us-grid" class="unsereSchule">Grid</a></li>
+					<li><a href="#us-container">Container - Full</a></li>
+					<li><a href="#us-grid">Grid</a></li>
 					<li><a href="#article">Article</a></li>
 					<li><a href="#sections">Sections</a></li>
 				</ul>
@@ -58,7 +48,7 @@
 				<a href="#navbar">Navbar</a>
 				<ul>
 					<li><a href="#simple-navbar">Simple Navbar</a></li>
-					<li><a href="#responsive-hamburger" class="unsereSchule">Responsive Hamburger Menu</a></li>
+					<li><a href="#responsive-hamburger">Responsive Hamburger Menu</a></li>
 
 				</ul>
 			</li>
@@ -71,41 +61,36 @@
 					<li><a href="#text__lists">Lists</a></li>
 					<li><a href="#text__blockquotes">Blockquotes</a></li>
 					<li><a href="#text__asides">Asides</a></li>
-					<li><a href="#text__details">Details / Summary / Accordions</a></li>
 					<li><a href="#text__address">Address</a></li>
 					<li><a href="#text__hr">Horizontal rules</a></li>
-					<li><a href="#text__tables">Tables</a></li>
 					<li><a href="#text__code">Code</a></li>
 					<li><a href="#text__inline">Inline elements</a></li>
-					<li><a href="#text__notice">Notice box</a></li>
-
-
 				</ul>
 			</li>
 			<li>
-				<a href="#embedded">Embedded content</a>
+				<a href="#embedded">Content</a>
 				<ul>
 					<li><a href="#embedded__images">Images</a></li>
-					<li><a href="#embedded__bgimages">Background images</a></li>
-					<li><a href="#embedded__audio">Audio</a></li>
-					<li><a href="#embedded__video">Video</a></li>
-					<li><a href="#embedded__canvas">Canvas</a></li>
-					<li><a href="#embedded__meter">Meter</a></li>
-					<li><a href="#embedded__progress">Progress</a></li>
-					<li><a href="#embedded__svg">Inline SVG</a></li>
-					<li><a href="#embedded__dialog">Dialog</a></li>
+					<li><a href="#text__tables">Tables</a></li>
+
 				</ul>
 			</li>
 			<li>
-				<a href="#forms">Form elements</a>
-				<ul>
+				<a href="#forms">Components</a>
+				<ul>					
+					<li><a href="#forms__action">Buttons</a></li>
+					<li><a href="#embedded__progress">Progress</a></li>
+					<li><a href="#embedded__dialog">Dialog / Modal</a></li>
+					<li><a href="#text__notice">Notice box</a></li>
+					<li><a href="#text__details">Details / Summary / Accordions</a></li>
+					<li><a href="#forms_fieldset">Fieldset</a></li>
 					<li><a href="#forms__input">Input fields</a></li>
 					<li><a href="#forms__select">Select menus</a></li>
 					<li><a href="#forms__checkbox">Checkboxes</a></li>
 					<li><a href="#forms__radio">Radio buttons</a></li>
 					<li><a href="#forms__textareas">Textareas</a></li>
 					<li><a href="#forms__html5">HTML5 inputs</a></li>
-					<li><a href="#forms__action">Buttons</a></li>
+
 				</ul>
 			</li>
 		</ul>
@@ -118,8 +103,8 @@
 			<h1>Layout</h1>
 	</main>
 	<main class="full" style="background-color: var(--accent-bg);">
-		<!-- Container -->
-		<h2 id="us-container" class="unsereSchule">Container - Full</h2>
+		<!-- Container - Full -->
+		<h2 id="us-container">Container - Full</h2>
 		<p>Du kannst einem Element die Klasse <code>.full</code> geben, damit der Inhalt die ganze Breite des
 			Browsers ausfüllt. Das Element muss ein Child von <code>body</code> sein.</p>
 
@@ -128,7 +113,7 @@
 		<details>
 			<summary>Code:</summary>
 			<pre>
-<code>&lt;div class="container"&gt;
+<code>&lt;div class="full"&gt;
 	&lt;h2&gt;Article&lt;/h2&gt;
 	&lt;p&gt;Text...&lt;/p&gt;
 &lt;/div&gt;</code></pre>
@@ -137,7 +122,7 @@
 
 
 		<!-- Grid -->
-		<h2 id="us-grid" class="unsereSchule">Grid</h2>
+		<h2 id="us-grid">Grid</h2>
 		<div class="grid">
 			<div>1</div>
 			<div>2</div>
@@ -163,9 +148,7 @@
 
 		<!-- Article -->
 		<article id="article">
-			<header>
-				<h2>Article</h2>
-			</header>
+			<h2>Article</h2>
 			<p>Text...</p>
 		</article>
 		<details>
@@ -204,6 +187,7 @@
 		<section id="navbar">
 			<h1>Navbar</h1>
 
+			<!-- Simple Navbar -->
 			<h2 id="simple-navbar">Simple Navbar</h2>
 			<header>
 				<nav>
@@ -228,7 +212,7 @@
 			</details>
 			<p><a href="#top">[Top]</a></p>
 
-			<!-- Hamburger Navbar -->
+			<!-- Responsive Hamburger Menu -->
 			<h2 id="responsive-hamburger">Responsive Hamburger Menu</h2>
 			<div class="ce_nav">
 				<div class="ce_brand">
@@ -326,53 +310,6 @@ ce_hamburger.onclick = function () {
 			</details>
 			<p><a href="#top">[Top]</a></p>
 
-			<!-- Blockquotes -->
-			<h2 id="text__blockquotes">Blockquotes</h2>
-			<blockquote>
-				<p>A block quotation (also known as a long quotation or extract) is a quotation in a written
-					document, that is set off from the main text as a paragraph, or block of text.</p>
-				<p>It is typically distinguished visually using indentation and a different typeface or
-					smaller size quotation. It may or may not include a citation, usually placed at the
-					bottom.</p>
-				<cite><a href="#!">Said no one, ever.</a></cite>
-			</blockquote>
-			<details>
-				<summary>Code:</summary>
-				<pre>
-<code>&lt;blockquote&gt;
-	&lt;p&gt;A block quotation ...&lt;/p&gt;
-	&lt;cite&gt;&lt;a href=""&gt;Said no one, ever.&lt;/a&gt;&lt;/cite&gt;
-&lt;/blockquote&gt;</code></pre>
-			</details>
-			<p><a href="#top">[Top]</a></p>
-
-			<!-- Asides -->
-			<h2 id="text__asides">Asides</h2>
-			<aside>
-				<h4>This is an aside</h4>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa cumque numquam natus harum delectus
-					autem, ipsam veritatis eligendi.</p>
-			</aside>
-			<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum eligendi optio ipsa nemo assumenda
-				mollitia inventore neque dolores animi ratione libero qui dolorem, distinctio aut, quae, iste,
-				cumque nihil enim!</p>
-			<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum perspiciatis corrupti eaque tempore
-				autem doloremque, placeat, in earum ab maxime commodi tenetur quos provident fugit assumenda,
-				consequatur vero ipsum, et.</p>
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing, elit. Molestias, facilis. Dolores rerum omnis,
-				adipisci odit ipsa, autem animi molestiae fugit temporibus fuga dignissimos, commodi et, itaque quo
-				voluptatem recusandae voluptatibus.</p>
-			<details>
-				<summary>Code:</summary>
-				<pre>
-<code>&lt;aside&gt;
-	&lt;h4&gt;This is an aside&lt;/h4&gt;
-	&lt;p&gt;Aside lorem ipsum dolor sit amet consectetur adipisicing elit...&lt;/p&gt;
-&lt;/aside&gt;
-&lt;p&gt;Lorem ipsum dolor sit, ...&lt;/p&gt;</code></pre>
-			</details>
-			<p><a href="#top">[Top]</a></p>
-
 			<!-- Lists -->
 			<h2 id="text__lists">Lists</h2>
 
@@ -427,23 +364,53 @@ ce_hamburger.onclick = function () {
 			</details>
 			<p><a href="#top">[Top]</a></p>
 
-			<!-- Details / Summary / Accordions -->
-			<h1 id="text__details">Details / Summary / Accordions</h1>
-			<details>
-				<summary>Expand for details</summary>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, odio! Odio natus ullam ad
-					quaerat, eaque necessitatibus, aliquid distinctio similique voluptatibus dicta consequuntur
-					animi. Quaerat facilis quidem unde eos! Ipsa.</p>
-			</details>
+			<!-- Blockquotes -->
+			<h2 id="text__blockquotes">Blockquotes</h2>
+			<blockquote>
+				<p>A block quotation (also known as a long quotation or extract) is a quotation in a written
+					document, that is set off from the main text as a paragraph, or block of text.</p>
+				<p>It is typically distinguished visually using indentation and a different typeface or
+					smaller size quotation. It may or may not include a citation, usually placed at the
+					bottom.</p>
+				<cite><a href="#!">Said no one, ever.</a></cite>
+			</blockquote>
 			<details>
 				<summary>Code:</summary>
 				<pre>
-<code>&lt;details&gt;
-	&lt;summary&gt;Expand for details&lt;/summary&gt;
-	&lt;p&gt;Content&lt;/p&gt;
-&lt;/details&gt;</code></pre>
+<code>&lt;blockquote&gt;
+	&lt;p&gt;A block quotation ...&lt;/p&gt;
+	&lt;cite&gt;&lt;a href=""&gt;Said no one, ever.&lt;/a&gt;&lt;/cite&gt;
+&lt;/blockquote&gt;</code></pre>
 			</details>
 			<p><a href="#top">[Top]</a></p>
+
+			<!-- Asides -->
+			<h2 id="text__asides">Asides</h2>
+			<aside>
+				<h4>This is an aside</h4>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa cumque numquam natus harum delectus
+					autem, ipsam veritatis eligendi.</p>
+			</aside>
+			<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum eligendi optio ipsa nemo assumenda
+				mollitia inventore neque dolores animi ratione libero qui dolorem, distinctio aut, quae, iste,
+				cumque nihil enim!</p>
+			<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum perspiciatis corrupti eaque tempore
+				autem doloremque, placeat, in earum ab maxime commodi tenetur quos provident fugit assumenda,
+				consequatur vero ipsum, et.</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing, elit. Molestias, facilis. Dolores rerum omnis,
+				adipisci odit ipsa, autem animi molestiae fugit temporibus fuga dignissimos, commodi et, itaque quo
+				voluptatem recusandae voluptatibus.</p>
+			<details>
+				<summary>Code:</summary>
+				<pre>
+<code>&lt;aside&gt;
+	&lt;h4&gt;This is an aside&lt;/h4&gt;
+	&lt;p&gt;Aside lorem ipsum dolor sit amet consectetur adipisicing elit...&lt;/p&gt;
+&lt;/aside&gt;
+&lt;p&gt;Lorem ipsum dolor sit, ...&lt;/p&gt;</code></pre>
+			</details>
+			<p><a href="#top">[Top]</a></p>
+
 
 			<!-- Address -->
 			<h1 id="text__address">Address</h1>
@@ -488,8 +455,120 @@ ce_hamburger.onclick = function () {
 			</details>
 			<p><a href="#top">[Top]</a></p>
 
+
+
+
+			<!-- Code -->
+			<h2 id="text__code">Code</h2>
+
+			<p><strong>Keyboard input:</strong> <kbd>Strg</kbd></p>
+			<p><strong>Inline code:</strong> <code>&lt;div&gt;code&lt;/div&gt;</code></p>
+			<p><strong>Sample output:</strong> <samp>This is sample output from a computer program.</samp>
+			</p>
+			<details>
+				<summary>Code:</summary>
+				<pre>
+<code>&lt;kbd&gt;Strg&lt;/kbd&gt;
+&lt;code&gt;...&lt;/code&gt;</code></pre>
+			</details>
+			<p><a href="#top">[Top]</a></p>
+
+			<!-- Pre-formatted text -->
+			<h2>Pre-formatted text</h2>
+			<pre>P R E F O R M A T T E D T E X T
+	! " # $ % &amp; ' ( ) * + , - . /
+	0 1 2 3 4 5 6 7 8 9 : ; &lt; = &gt; ?
+	@ A B C D E F G H I J K L M N O
+	P Q R S T U V W X Y Z [ \ ] ^ _
+	` a b c d e f g h i j k l m n o
+	p q r s t u v w x y z { | } ~ </pre>
+			<details>
+				<summary>Code:</summary>
+				<pre>
+<code>&lt;pre&gt;
+&lt;code&gt;...&lt;/code&gt;
+&lt;/pre&gt;</code></pre>
+			</details>
+			<p><a href="#top">[Top]</a></p>
+
+			<!-- Inline elements -->
+			<article id="text__inline">
+				<header>
+					<h2>Inline elements</h2>
+				</header>
+
+				<p><a href="#!">This is a text link</a>.</p>
+				<p><strong>Strong is used to indicate strong importance.</strong></p>
+				<p><em>This text has added emphasis.</em></p>
+				<p>The <b>b element</b> is stylistically different text from normal text, without any special
+					importance.</p>
+				<p>The <i>i element</i> is text that is offset from the normal text.</p>
+				<p>The <u>u element</u> is text with an unarticulated, though explicitly rendered, non-textual
+					annotation.</p>
+				<p><del>This text is deleted</del> and <ins>This text is inserted</ins>.</p>
+				<p><s>This text has a strikethrough</s>.</p>
+				<p>Superscript<sup>®</sup>.</p>
+				<p>Subscript for things like H<sub>2</sub>O.</p>
+				<p><small>This small text is small for fine print, etc.</small></p>
+				<p>Abbreviation: <abbr title="HyperText Markup Language">HTML</abbr></p>
+				<p><q cite="https://developer.mozilla.org/en-US/docs/HTML/Element/q">This text is a short inline
+						quotation.</q></p>
+				<p><cite>This is a citation.</cite></p>
+				<p>The <dfn>dfn element</dfn> indicates a definition.</p>
+				<p>The <mark>mark element</mark> indicates a highlight.</p>
+				<p>The <var>variable element</var>, such as <var>x</var> = <var>y</var>.</p>
+				<p>The time element: <time datetime="2013-04-06T12:32+00:00">2 weeks ago</time></p>
+
+				<footer>
+					<p><a href="#top">[Top]</a></p>
+				</footer>
+			</article>
+			<details>
+				<summary>Code:</summary>
+				<pre>
+<code>&lt;mark&gt;mark element&lt;/mark&gt;</code></pre>
+			</details>
+
+		</section>
+
+
+		<section id="embedded">
+			<header>
+				<h1>Content</h1>
+			</header>
+
+			<!-- Images -->
+			<h2 id="embedded__images">Images</h2>
+
+			<!-- Image -->
+			<h3>Image</h3>
+			<p><img src="https://placekitten.com/480/480" alt="Photo of a kitten"></p>
+			<details>
+				<summary>Code:</summary>
+				<pre>
+<code>&lt;img src="myPicture.jpg"&gt;</code></pre>
+			</details>
+			<p><a href="#top">[Top]</a></p>
+
+			<!-- Image with caption -->
+			<h3>Image with caption </h3>
+			<figure>
+				<img src="https://placekitten.com/420/420" alt="Photo of a kitten">
+				<figcaption>Here is a caption for this image.</figcaption>
+			</figure>
+			<details>
+				<summary>Code:</summary>
+				<pre>
+<code>&lt;figure&gt;
+	&lt;img src="myPicture.jpg"&gt;
+	&lt;figcaption&gt;caption&lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+			</details>
+			<p><a href="#top">[Top]</a></p>
+
 			<!-- Tables -->
 			<h2 id="text__tables">Tables</h2>
+			<!-- normal Table -->
 			<table>
 				<caption>Table Caption</caption>
 				<thead>
@@ -541,114 +620,35 @@ ce_hamburger.onclick = function () {
 					</tr>
 				</tbody>
 			</table>
-			<table>
-				<caption>Overflowing table</caption>
-				<colgroup>
-					<col>
-					<col>
-					<col>
-					<col>
-					<col>
-				</colgroup>
-				<thead>
-					<tr>
-						<th>Header_1</th>
-						<th>Header_2</th>
-						<th>Header_3</th>
-						<th>Header_4</th>
-						<th>Header_5</th>
-						<th>Header_6</th>
-						<th>Header_7</th>
-						<th>Header_8</th>
-						<th>Header_9</th>
-						<th>Header_10</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>Row:1 Cell:1</td>
-						<td>Row:1 Cell:2</td>
-						<td>Row:1 Cell:3</td>
-						<td>Row:1 Cell:4</td>
-						<td>Row:1 Cell:5</td>
-						<td>Row:1 Cell:6</td>
-						<td>Row:1 Cell:7</td>
-						<td>Row:1 Cell:8</td>
-						<td>Row:1 Cell:9</td>
-						<td>Row:1 Cell:10</td>
-					</tr>
-					<tr>
-						<td>Row:2 Cell:1</td>
-						<td>Row:2 Cell:2</td>
-						<td>Row:2 Cell:3</td>
-						<td>Row:2 Cell:4</td>
-						<td>Row:2 Cell:5</td>
-						<td>Row:2 Cell:6</td>
-						<td>Row:2 Cell:7</td>
-						<td>Row:2 Cell:8</td>
-						<td>Row:2 Cell:9</td>
-						<td>Row:2 Cell:10</td>
-					</tr>
-					<tr>
-						<td>Row:3 Cell:1</td>
-						<td>Row:3 Cell:2</td>
-						<td>Row:3 Cell:3</td>
-						<td>Row:3 Cell:4</td>
-						<td>Row:3 Cell:5</td>
-						<td>Row:3 Cell:6</td>
-						<td>Row:3 Cell:7</td>
-						<td>Row:3 Cell:8</td>
-						<td>Row:3 Cell:9</td>
-						<td>Row:3 Cell:10</td>
-					</tr>
-					<tr>
-						<td>Row:4 Cell:1</td>
-						<td>Row:4 Cell:2</td>
-						<td>Row:4 Cell:3</td>
-						<td>Row:4 Cell:4</td>
-						<td>Row:4 Cell:5</td>
-						<td>Row:4 Cell:6</td>
-						<td>Row:4 Cell:7</td>
-						<td>Row:4 Cell:8</td>
-						<td>Row:4 Cell:9</td>
-						<td>Row:4 Cell:10</td>
-					</tr>
-					<tr>
-						<td>Row:5 Cell:1</td>
-						<td>Row:5 Cell:2</td>
-						<td>Row:5 Cell:3</td>
-						<td>Row:5 Cell:4</td>
-						<td>Row:5 Cell:5</td>
-						<td>Row:5 Cell:6</td>
-						<td>Row:5 Cell:7</td>
-						<td>Row:5 Cell:8</td>
-						<td>Row:5 Cell:9</td>
-						<td>Row:5 Cell:10</td>
-					</tr>
-					<tr>
-						<td>Row:6 Cell:1</td>
-						<td>Row:6 Cell:2</td>
-						<td>Row:6 Cell:3</td>
-						<td>Row:6 Cell:4</td>
-						<td>Row:6 Cell:5</td>
-						<td>Row:6 Cell:6</td>
-						<td>Row:6 Cell:7</td>
-						<td>Row:6 Cell:8</td>
-						<td>Row:6 Cell:9</td>
-						<td>Row:6 Cell:10</td>
-					</tr>
-				</tbody>
-			</table>
+			<details>
+				<summary>Code:</summary>
+				<pre>
+<code>&lt;table&gt;
+	&lt;thead&gt;
+		&lt;tr&gt;
+			&lt;th&gt;Name&lt;/th&gt;
+			&lt;th&gt;Number&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Jackie&lt;/td&gt;
+			&lt;td&gt;012345&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Lucy&lt;/td&gt;
+			&lt;td&gt;112346&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+			</details>
+			<p><a href="#top">[Top]</a></p>
+
+			<!-- Table in figure - overflows -->
 			<figure>
 				<table>
 					<caption>Overflowing table in figure</caption>
-					<colgroup>
-						<col>
-						<col>
-						<col>
-						<col>
-						<col>
-					</colgroup>
+
 					<thead>
 						<tr>
 							<th>Header_1</th>
@@ -740,286 +740,64 @@ ce_hamburger.onclick = function () {
 				</table>
 				<figcaption>Table in figure</figcaption>
 			</figure>
-			<details>
-				<summary>Overflowing table in details</summary>
-				<table>
-					<caption>Overflowing table</caption>
-					<colgroup>
-						<col>
-						<col>
-						<col>
-						<col>
-						<col>
-					</colgroup>
-					<thead>
-						<tr>
-							<th>Header_1</th>
-							<th>Header_2</th>
-							<th>Header_3</th>
-							<th>Header_4</th>
-							<th>Header_5</th>
-							<th>Header_6</th>
-							<th>Header_7</th>
-							<th>Header_8</th>
-							<th>Header_9</th>
-							<th>Header_10</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>Row:1 Cell:1</td>
-							<td>Row:1 Cell:2</td>
-							<td>Row:1 Cell:3</td>
-							<td>Row:1 Cell:4</td>
-							<td>Row:1 Cell:5</td>
-							<td>Row:1 Cell:6</td>
-							<td>Row:1 Cell:7</td>
-							<td>Row:1 Cell:8</td>
-							<td>Row:1 Cell:9</td>
-							<td>Row:1 Cell:10</td>
-						</tr>
-						<tr>
-							<td>Row:2 Cell:1</td>
-							<td>Row:2 Cell:2</td>
-							<td>Row:2 Cell:3</td>
-							<td>Row:2 Cell:4</td>
-							<td>Row:2 Cell:5</td>
-							<td>Row:2 Cell:6</td>
-							<td>Row:2 Cell:7</td>
-							<td>Row:2 Cell:8</td>
-							<td>Row:2 Cell:9</td>
-							<td>Row:2 Cell:10</td>
-						</tr>
-						<tr>
-							<td>Row:3 Cell:1</td>
-							<td>Row:3 Cell:2</td>
-							<td>Row:3 Cell:3</td>
-							<td>Row:3 Cell:4</td>
-							<td>Row:3 Cell:5</td>
-							<td>Row:3 Cell:6</td>
-							<td>Row:3 Cell:7</td>
-							<td>Row:3 Cell:8</td>
-							<td>Row:3 Cell:9</td>
-							<td>Row:3 Cell:10</td>
-						</tr>
-						<tr>
-							<td>Row:4 Cell:1</td>
-							<td>Row:4 Cell:2</td>
-							<td>Row:4 Cell:3</td>
-							<td>Row:4 Cell:4</td>
-							<td>Row:4 Cell:5</td>
-							<td>Row:4 Cell:6</td>
-							<td>Row:4 Cell:7</td>
-							<td>Row:4 Cell:8</td>
-							<td>Row:4 Cell:9</td>
-							<td>Row:4 Cell:10</td>
-						</tr>
-						<tr>
-							<td>Row:5 Cell:1</td>
-							<td>Row:5 Cell:2</td>
-							<td>Row:5 Cell:3</td>
-							<td>Row:5 Cell:4</td>
-							<td>Row:5 Cell:5</td>
-							<td>Row:5 Cell:6</td>
-							<td>Row:5 Cell:7</td>
-							<td>Row:5 Cell:8</td>
-							<td>Row:5 Cell:9</td>
-							<td>Row:5 Cell:10</td>
-						</tr>
-						<tr>
-							<td>Row:6 Cell:1</td>
-							<td>Row:6 Cell:2</td>
-							<td>Row:6 Cell:3</td>
-							<td>Row:6 Cell:4</td>
-							<td>Row:6 Cell:5</td>
-							<td>Row:6 Cell:6</td>
-							<td>Row:6 Cell:7</td>
-							<td>Row:6 Cell:8</td>
-							<td>Row:6 Cell:9</td>
-							<td>Row:6 Cell:10</td>
-						</tr>
-					</tbody>
-				</table>
-			</details>
-			<details>
-				<summary>Code:</summary>
-				<pre>
-<code>&lt;table&gt;
-	&lt;thead&gt;
-		&lt;tr&gt;
-			&lt;th&gt;Name&lt;/th&gt;
-			&lt;th&gt;Number&lt;/th&gt;
-		&lt;/tr&gt;
-	&lt;/thead&gt;
-	&lt;tbody&gt;
-		&lt;tr&gt;
-			&lt;td&gt;Jackie&lt;/td&gt;
-			&lt;td&gt;012345&lt;/td&gt;
-		&lt;/tr&gt;
-		&lt;tr&gt;
-			&lt;td&gt;Lucy&lt;/td&gt;
-			&lt;td&gt;112346&lt;/td&gt;
-		&lt;/tr&gt;
-	&lt;/tbody&gt;
-&lt;/table&gt;</code></pre>
-			</details>
-			<p><a href="#top">[Top]</a></p>
-
-
-			<!-- Code -->
-			<h2 id="text__code">Code</h2>
-
-			<p><strong>Keyboard input:</strong> <kbd>Strg</kbd></p>
-			<p><strong>Inline code:</strong> <code>&lt;div&gt;code&lt;/div&gt;</code></p>
-			<p><strong>Sample output:</strong> <samp>This is sample output from a computer program.</samp>
-			</p>
-			<h2>Pre-formatted text</h2>
-			<pre>P R E F O R M A T T E D T E X T
-	! " # $ % &amp; ' ( ) * + , - . /
-	0 1 2 3 4 5 6 7 8 9 : ; &lt; = &gt; ?
-	@ A B C D E F G H I J K L M N O
-	P Q R S T U V W X Y Z [ \ ] ^ _
-	` a b c d e f g h i j k l m n o
-	p q r s t u v w x y z { | } ~ </pre>
-			<details>
-				<summary>Code:</summary>
-				<pre>
-<code>&lt;kbd&gt;Strg&lt;/kbd&gt;
-&lt;code&gt;...&lt;/code&gt;</code></pre>
-			</details>
-			<p><a href="#top">[Top]</a></p>
-
-			<article id="text__inline">
-				<header>
-					<h2>Inline elements</h2>
-				</header>
-
-				<p><a href="#!">This is a text link</a>.</p>
-				<p><strong>Strong is used to indicate strong importance.</strong></p>
-				<p><em>This text has added emphasis.</em></p>
-				<p>The <b>b element</b> is stylistically different text from normal text, without any special
-					importance.</p>
-				<p>The <i>i element</i> is text that is offset from the normal text.</p>
-				<p>The <u>u element</u> is text with an unarticulated, though explicitly rendered, non-textual
-					annotation.</p>
-				<p><del>This text is deleted</del> and <ins>This text is inserted</ins>.</p>
-				<p><s>This text has a strikethrough</s>.</p>
-				<p>Superscript<sup>®</sup>.</p>
-				<p>Subscript for things like H<sub>2</sub>O.</p>
-				<p><small>This small text is small for fine print, etc.</small></p>
-				<p>Abbreviation: <abbr title="HyperText Markup Language">HTML</abbr></p>
-				<p><q cite="https://developer.mozilla.org/en-US/docs/HTML/Element/q">This text is a short inline
-						quotation.</q></p>
-				<p><cite>This is a citation.</cite></p>
-				<p>The <dfn>dfn element</dfn> indicates a definition.</p>
-				<p>The <mark>mark element</mark> indicates a highlight.</p>
-				<p>The <var>variable element</var>, such as <var>x</var> = <var>y</var>.</p>
-				<p>The time element: <time datetime="2013-04-06T12:32+00:00">2 weeks ago</time></p>
-
-				<footer>
-					<p><a href="#top">[Top]</a></p>
-				</footer>
-			</article>
-			<details>
-				<summary>Code:</summary>
-				<pre>
-<code>&lt;mark&gt;mark element&lt;/mark&gt;</code></pre>
-			</details>
-
-
-
-			<!-- Notice Box-->
-			<h2 id="text__notice">Notice Box</h2>
-			<p class="notice">This is a notice box ...</p>
 
 			<details>
 				<summary>Code:</summary>
 				<pre>
-<code>&lt;p class="notice"&gt;This is a notice box ...&lt;/p&gt;</code></pre>
+<code>&lt;figure&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+	&lt;th&gt;Name&lt;/th&gt;
+	&lt;th&gt;Number&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+	&lt;td&gt;Jackie&lt;/td&gt;
+	&lt;td&gt;012345&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;Lucy&lt;/td&gt;
+	&lt;td&gt;112346&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/figure&gt;</code></pre>
 			</details>
 			<p><a href="#top">[Top]</a></p>
 
 		</section>
 
-
-		<section id="embedded">
+		<!-- COMPONENTS -->
+		<section id="forms">
 			<header>
-				<h2>Embedded content</h2>
+				<h1>Components</h1>
 			</header>
-			<article id="embedded__images">
-				<header>
-					<h2>Images</h2>
-				</header>
 
-				<h3>Plain <code>&lt;img&gt;</code> element</h3>
-				<p><img src="https://placekitten.com/480/480" alt="Photo of a kitten"></p>
-				<h3><code>&lt;figure&gt;</code> element with <code>&lt;img&gt;</code> element</h3>
-				<figure><img src="https://placekitten.com/420/420" alt="Photo of a kitten"></figure>
-				<h3><code>&lt;figure&gt;</code> element with <code>&lt;img&gt;</code> and
-					<code>&lt;figcaption&gt;</code> elements
-				</h3>
-				<figure>
-					<img src="https://placekitten.com/420/420" alt="Photo of a kitten">
-					<figcaption>Here is a caption for this image.</figcaption>
-				</figure>
-				<h3><code>&lt;figure&gt;</code> element with a <code>&lt;picture&gt;</code> element</h3>
-				<figure>
-					<picture>
-						<source srcset="https://placekitten.com/800/800" media="(min-width: 800px)">
-						<img src="https://placekitten.com/420/420" alt="Photo of a kitten" />
-					</picture>
-				</figure>
+			<!-- Buttons -->
+			<h2 id="forms__action">Buttons</h2>
+			<fieldset id="">
+				<legend>Buttons</legend>
 
-				<footer>
-					<p><a href="#top">[Top]</a></p>
-				</footer>
-			</article>
-			<article id="embedded__bgimages">
-				<header>
-					<h2>Background images</h2>
-				</header>
-				<figure style="background-image:url('https://placekitten.com/300/300'); width:300px; height: 300px;">
-				</figure>
-				<footer>
-					<p><a href="#top">[Top]</a></p>
-				</footer>
-			</article>
-			<article id="embedded__audio">
-				<header>
-					<h2>Audio</h2>
-				</header>
-				<audio controls="">audio</audio>
-				<footer>
-					<p><a href="#top">[Top]</a></p>
-				</footer>
-			</article>
-			<article id="embedded__video">
-				<header>
-					<h2>Video</h2>
-				</header>
-				<video controls="">video</video>
-				<footer>
-					<p><a href="#top">[Top]</a></p>
-				</footer>
-			</article>
-			<article id="embedded__canvas">
-				<header>
-					<h2>Canvas</h2>
-				</header>
-				<canvas>canvas</canvas>
-				<footer>
-					<p><a href="#top">[Top]</a></p>
-				</footer>
-			</article>
-			<article id="embedded__meter">
-				<header>
-					<h2>Meter</h2>
-				</header>
-				<meter value="2" min="0" max="10">2 out of 10</meter>
-				<footer>
-					<p><a href="#top">[Top]</a></p>
-				</footer>
-			</article>
+				<p>
+					<button>Normal</button>
+					<button class="btnSuccess">Success</button>
+					<button class="btnDanger">Danger</button>
+					<button class="btnWarn">Warn</button>
+					<button disabled>Button disabled</button>
+				</p>
+			</fieldset>
+			<details>
+				<summary>Code:</summary>
+				<pre>
+<code>&lt;button&gt;Normal&lt;/button&gt;
+&lt;button class="btnSuccess"&gt;Success&lt;/button&gt;
+&lt;button class="btnDanger"&gt;Danger&lt;/button&gt;
+&lt;button class="btnWarn"&gt;Warn&lt;/button&gt;
+&lt;button disabled&gt;Button disabled&lt;/button&gt;</code></pre>
+			</details>
+			<p><a href="#top">[Top]</a></p>
 
 			<!-- Progress -->
 			<h2 id="embedded__progress">Progress</h2>
@@ -1035,21 +813,8 @@ ce_hamburger.onclick = function () {
 			</details>
 			<p><a href="#top">[Top]</a></p>
 
-			<article id="embedded__svg">
-				<header>
-					<h2>Inline SVG</h2>
-				</header>
-				<svg width="100px" height="100px">
-					<circle cx="100" cy="100" r="100" fill="#1fa3ec"></circle>
-				</svg>
-				<footer>
-					<p><a href="#top">[Top]</a></p>
-				</footer>
-			</article>
-
 			<!-- Dialog -->
-
-			<h2 id="embedded__dialog">Dialog</h2>
+			<h2 id="embedded__dialog">Dialog / Modal</h2>
 			<button onclick="document.getElementById('dialog-demo').showModal()">Open</button>
 			<dialog id="dialog-demo">
 				<h2>Dialog</h2>
@@ -1074,21 +839,46 @@ ce_hamburger.onclick = function () {
 			</details>
 			<p><a href="#top">[Top]</a></p>
 
-		</section>
 
-		<section id="forms">
-			<header>
-				<h2>Form elements</h2>
-			</header>
 
+			<!-- Notice Box-->
+			<h2 id="text__notice">Notice Box</h2>
+			<p class="notice">This is a notice box ...</p>
+
+			<details>
+				<summary>Code:</summary>
+				<pre>
+<code>&lt;p class="notice"&gt;This is a notice box ...&lt;/p&gt;</code></pre>
+			</details>
+			<p><a href="#top">[Top]</a></p>
+
+
+			<!-- Details / Summary / Accordions -->
+			<h2 id="text__details">Details / Summary / Accordions</h2>
+			<details>
+				<summary>Expand for details</summary>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, odio! Odio natus ullam ad
+					quaerat, eaque necessitatibus, aliquid distinctio similique voluptatibus dicta consequuntur
+					animi. Quaerat facilis quidem unde eos! Ipsa.</p>
+			</details>
+			<details>
+				<summary>Code:</summary>
+				<pre>
+<code>&lt;details&gt;
+&lt;summary&gt;Expand for details&lt;/summary&gt;
+&lt;p&gt;Content&lt;/p&gt;
+&lt;/details&gt;</code></pre>
+			</details>
+			<p><a href="#top">[Top]</a></p>
+
+			<!-- Fieldset -->
+			<h2 id="forms_fieldset">Fieldset</h2>
 			<fieldset>
 				<legend>Fieldset</legend>
 				<label>Name:
 					<input type="text" placeholder="Enter name">
 				</label>
 			</fieldset>
-
-			<p><a href="#top">[Top]</a></p>
 			<details>
 				<summary>Code:</summary>
 				<pre>
@@ -1099,9 +889,12 @@ ce_hamburger.onclick = function () {
 	&lt;/label&gt;
 &lt;/fieldset&gt;</code></pre>
 			</details>
+			<p><a href="#top">[Top]</a></p>
 
+			<!-- Input fields -->
+			<h2 id="forms__input">Input fields</h2>
 			<form>
-				<fieldset id="forms__input">
+				<fieldset id="">
 					<legend>Input fields</legend>
 					<p>
 						<label for="input__text">Text Input</label>
@@ -1112,22 +905,6 @@ ce_hamburger.onclick = function () {
 						<input id="input__password" type="password" placeholder="Type your Password">
 					</p>
 					<p>
-						<label for="input__webaddress">Web Address</label>
-						<input id="input__webaddress" type="url" placeholder="https://yoursite.com">
-					</p>
-					<p>
-						<label for="input__emailaddress">Email Address</label>
-						<input id="input__emailaddress" type="email" placeholder="name@email.com">
-					</p>
-					<p>
-						<label for="input__phone">Phone Number</label>
-						<input id="input__phone" type="tel" placeholder="(999) 999-9999">
-					</p>
-					<p>
-						<label for="input__search">Search</label>
-						<input id="input__search" type="search" placeholder="Enter Search Term">
-					</p>
-					<p>
 						<label for="input__text2">Number Input</label>
 						<input id="input__text2" type="number" placeholder="Enter a Number">
 					</p>
@@ -1136,8 +913,18 @@ ce_hamburger.onclick = function () {
 						<input id="input__file" type="file">
 					</p>
 				</fieldset>
+				<details>
+					<p>Weitere Typen: <code>text, password, number, file</code></p>
+					<summary>Code:</summary>
+					<pre>
+<code>&lt;label&gt;Text Input&lt;/label&gt;
+&lt;input type="text" placeholder="Enter name"&gt;</code></pre>
+				</details>
 				<p><a href="#top">[Top]</a></p>
-				<fieldset id="forms__select">
+
+				<!-- Select menus -->
+				<h2 id="forms__select">Select menus</h2>
+				<fieldset id="">
 					<legend>Select menus</legend>
 					<p>
 						<label for="select">Select</label>
@@ -1160,77 +947,108 @@ ce_hamburger.onclick = function () {
 						</select>
 					</p>
 				</fieldset>
+				<details>
+					<summary>Code:</summary>
+					<pre>
+<code>&lt;select&gt;
+	&lt;option&gt;Option 1&lt;/option&gt;
+	&lt;option&gt;Option 2&lt;/option&gt;
+	&lt;option&gt;Option 3&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+				</details>
 				<p><a href="#top">[Top]</a></p>
-				<fieldset id="forms__checkbox">
+
+				<!-- Checkboxes -->
+				<h2 id="forms__checkbox">Checkboxes</h2>
+				<fieldset id="">
 					<legend>Checkboxes</legend>
-					<p>Nested <code>label > input</code></p>
-					<ul>
-						<li><label for="checkbox1"><input id="checkbox1" name="checkbox" type="checkbox"
-									checked="checked"> Choice A</label></li>
-						<li><label for="checkbox2"><input id="checkbox2" name="checkbox" type="checkbox"> Choice
-								B</label></li>
-						<li><label for="checkbox3"><input id="checkbox3" name="checkbox" type="checkbox"> Choice
-								C</label></li>
-					</ul>
-					<p>Sibling <code>input + label</code></p>
-					<ul>
-						<li>
-							<input id="checkbox4" name="checkbox" type="checkbox" checked="checked">
-							<label for="checkbox4">Choice A</label>
-						</li>
-						<li>
-							<input id="checkbox5" name="checkbox" type="checkbox">
-							<label for="checkbox5">Choice B</label>
-						</li>
-						<li>
-							<input id="checkbox6" name="checkbox" type="checkbox">
-							<label for="checkbox6">Choice C</label>
-						</li>
-					</ul>
+					<p>Nested <code>&lt;label&gt; &lt;input ...&gt; &lt;/label&gt;</code></p>
+					<label for="checkbox1"><input id="checkbox1" name="checkbox" type="checkbox" checked="checked">
+						Choice A</label>
+					<label for="checkbox2"><input id="checkbox2" name="checkbox" type="checkbox"> Choice
+						B</label>
+					<label for="checkbox3"><input id="checkbox3" name="checkbox" type="checkbox"> Choice
+						C</label>
+
+					<p>Sibling <code>&lt;input ...&gt; &lt;label&gt;&lt;/label&gt;</code></p>
+					<input id="checkbox4" name="checkbox" type="checkbox" checked="checked">
+					<label for="checkbox4">Choice A</label>
+					<input id="checkbox5" name="checkbox" type="checkbox">
+					<label for="checkbox5">Choice B</label>
+					<input id="checkbox6" name="checkbox" type="checkbox">
+					<label for="checkbox6">Choice C</label>
+
 				</fieldset>
+				<details>
+					<summary>Code:</summary>
+					<pre>
+<code># nested
+&lt;label for="checkbox1"&gt;
+	&lt;input id="checkbox1" name="checkbox" type="checkbox" checked="checked"&gt;
+	Choice A
+&lt;/label&gt;
+
+# sibling
+&lt;input id="checkbox1" name="checkbox" type="checkbox" checked="checked"&gt;
+&lt;label for="checkbox1"&gt;Choice A&lt;/label&gt;</code></pre>
+				</details>
 				<p><a href="#top">[Top]</a></p>
-				<fieldset id="forms__radio">
+
+				<!-- Radio buttons -->
+				<h2 id="forms__radio">Radio buttons</h2>
+				<fieldset id="">
 					<legend>Radio buttons</legend>
-					<p>Nested <code>label > input</code></p>
-					<ul>
-						<li><label for="radio1"><input id="radio1" name="radio" type="radio" checked="checked">
-								Option 1</label></li>
-						<li><label for="radio2"><input id="radio2" name="radio" type="radio"> Option 2</label></li>
-						<li><label for="radio3"><input id="radio3" name="radio" type="radio"> Option 3</label></li>
-					</ul>
-					<p>Sibling <code>input + label</code></p>
-					<ul>
-						<li>
-							<input id="radio4" name="radio" type="radio" checked="checked">
-							<label for="radio4">Option 1</label>
-						</li>
-						<li>
-							<input id="radio5" name="radio" type="radio">
-							<label for="radio5">Option 2</label>
-						</li>
-						<li>
-							<input id="radio6" name="radio" type="radio">
-							<label for="radio6">Option 3</label>
-						</li>
-					</ul>
+					<p>Nested <code>&lt;label&gt; &lt;input ...&gt; &lt;/label&gt;</code></p>
+					<label for="radio1"><input id="radio1" name="radio" type="radio" checked="checked">
+						Option 1</label>
+					<label for="radio2"><input id="radio2" name="radio" type="radio"> Option 2</label>
+					<label for="radio3"><input id="radio3" name="radio" type="radio"> Option 3</label>
+
+
+					<p>Sibling <code>&lt;input ...&gt; &lt;label&gt;&lt;/label&gt;</code></p>
+					<input id="radio4" name="radio2" type="radio" checked="checked">
+					<label for="radio4">Option 1</label>
+					<input id="radio5" name="radio2" type="radio">
+					<label for="radio5">Option 2</label>
+					<input id="radio6" name="radio2" type="radio">
+					<label for="radio6">Option 3</label>
 				</fieldset>
+				<details>
+					<p>Die Radio-Gruppe wird über <code>name="radio1"</code> definiert.</p>
+					<summary>Code:</summary>
+					<pre>
+<code># nested
+&lt;label for="radio1"&gt;
+	&lt;input id="radio1" name="radio1" type="radio" checked="checked"&gt;
+	Option 1
+&lt;/label&gt;
+
+# sibling
+&lt;input id="radio1" name="radio1" type="radio" checked="checked"&gt;
+&lt;label for="radio1"&gt;Option 1&lt;/label&gt;</code></pre>
+				</details>
 				<p><a href="#top">[Top]</a></p>
-				<fieldset id="forms__textareas">
+
+				<!-- Textarea -->
+				<h2 id="forms__textareas">Textareas</h2>
+				<fieldset id="">
 					<legend>Textareas</legend>
 					<p>
 						<label for="textarea">Textarea</label>
 						<textarea id="textarea" rows="8" cols="48" placeholder="Enter your message here"></textarea>
 					</p>
 				</fieldset>
-				<p><a href="#top">[Top]</a></p>
 				<details>
 					<summary>Code:</summary>
 					<pre>
 <code>&lt;label for="textarea"&gt;Textarea&lt;/label&gt;
 &lt;textarea id="textarea" rows="8" cols="48" placeholder="Enter your message here"&gt;&lt;/textarea&gt;</code></pre>
 				</details>
+				<p><a href="#top">[Top]</a></p>
 
-				<fieldset id="forms__html5">
+				<!-- HTML5 inputs -->
+				<h2 id="forms__html5">HTML5 inputs</h2>
+				<fieldset id="">
 					<legend>HTML5 inputs</legend>
 					<p>
 						<label for="ic">Color input</label>
@@ -1248,49 +1066,20 @@ ce_hamburger.onclick = function () {
 						<label for="idd">Date input</label>
 						<input type="date" id="idd" value="1970-01-01">
 					</p>
-					<p>
-						<label for="idm">Month input</label>
-						<input type="month" id="idm" value="1970-01">
-					</p>
-					<p>
-						<label for="idw">Week input</label>
-						<input type="week" id="idw" value="1970-W01">
-					</p>
-					<p>
-						<label for="idt">Datetime input</label>
-						<input type="datetime" id="idt" value="1970-01-01T00:00:00Z">
-					</p>
-					<p>
-						<label for="idtl">Datetime-local input</label>
-						<input type="datetime-local" id="idtl" value="1970-01-01T00:00">
-					</p>
-					<p>
-						<label for="idl">Datalist</label>
-						<input type="text" id="idl" list="example-list">
-						<datalist id="example-list">
-							<option value="Example #1" />
-							<option value="Example #2" />
-							<option value="Example #3" />
-						</datalist>
-					</p>
+
 				</fieldset>
+				<details>
+					<summary>Code:</summary>
+					<pre>
+<code>&lt;input type="color" id="ic" value="#000000"&gt;
+&lt;input type="number" id="in" min="0" max="10" value="5"&gt;
+&lt;input type="range" id="ir" value="10"&gt;
+&lt;input type="date" id="idd" value="2000-01-01"&gt;</code></pre>
+				</details>
 				<p><a href="#top">[Top]</a></p>
-				<fieldset id="forms__action">
-					<legend>Action buttons</legend>
-					<p>
-						<input type="submit" value="<input type=submit>">
-						<input type="button" value="<input type=button>">
-						<input type="reset" value="<input type=reset>">
-						<input type="submit" value="<input disabled>" disabled>
-					</p>
-					<p>
-						<button type="submit">&lt;button type=submit&gt;</button>
-						<button type="button">&lt;button type=button&gt;</button>
-						<button type="reset">&lt;button type=reset&gt;</button>
-						<button type="button" disabled>&lt;button disabled&gt;</button>
-					</p>
-				</fieldset>
-				<p><a href="#top">[Top]</a></p>
+
+
+
 			</form>
 		</section>
 	</main>
